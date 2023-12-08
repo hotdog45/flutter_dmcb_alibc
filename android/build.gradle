@@ -83,7 +83,8 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    // implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar','*.aar'], dir: 'libs')
 
 //    //联盟电商基础链路套件
     implementation(name: 'alibcad-5.0.1.5', ext: 'aar')
