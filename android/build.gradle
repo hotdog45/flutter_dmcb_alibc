@@ -40,46 +40,46 @@ android {
         multiDexEnabled true
     }
 
-    signingConfigs {
-        debug {
-            keyAlias keystoreProperties['keyAlias']
-            keyPassword keystoreProperties['keyPassword']
-            storeFile file(keystoreProperties['storeFile'])
-            storePassword keystoreProperties['storePassword']
-        }
-        release {
-            keyAlias keystoreProperties['keyAlias']
-            keyPassword keystoreProperties['keyPassword']
-            storeFile file(keystoreProperties['storeFile'])
-            storePassword keystoreProperties['storePassword']
-        }
-    }
+//     signingConfigs {
+//         debug {
+//             keyAlias keystoreProperties['keyAlias']
+//             keyPassword keystoreProperties['keyPassword']
+//             storeFile file(keystoreProperties['storeFile'])
+//             storePassword keystoreProperties['storePassword']
+//         }
+//         release {
+//             keyAlias keystoreProperties['keyAlias']
+//             keyPassword keystoreProperties['keyPassword']
+//             storeFile file(keystoreProperties['storeFile'])
+//             storePassword keystoreProperties['storePassword']
+//         }
+//     }
 
-    buildTypes {
-        debug {
-            minifyEnabled false
-            shrinkResources false
-            signingConfig signingConfigs.debug
-//            ndk {
-//                abiFilters "armeabi-v7a"
-//            }
-        }
-        release {
-            minifyEnabled false
-            shrinkResources false
-            signingConfig signingConfigs.release
-//            ndk {
-//                abiFilters "armeabi-v7a"
-//            }
-        }
-    }
+//     buildTypes {
+//         debug {
+//             minifyEnabled false
+//             shrinkResources false
+//             signingConfig signingConfigs.debug
+// //            ndk {
+// //                abiFilters "armeabi-v7a"
+// //            }
+//         }
+//         release {
+//             minifyEnabled false
+//             shrinkResources false
+//             signingConfig signingConfigs.release
+// //            ndk {
+// //                abiFilters "armeabi-v7a"
+// //            }
+//         }
+//     }
 
-    sourceSets {
-        main {
-            jniLibs.srcDir 'libs'
-            jni.srcDirs = []    //disable automatic ndk-build
-        }
-    }
+    // sourceSets {
+    //     main {
+    //         jniLibs.srcDir 'libs'
+    //         jni.srcDirs = []    //disable automatic ndk-build
+    //     }
+    // }
 }
 
 dependencies {
